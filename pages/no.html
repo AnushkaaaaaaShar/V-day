@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 800px; /* Adjust this value based on your image's original size */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 90vh; /* Ensures image doesn't exceed viewport height */
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="/pictures/no.jpg" alt="No image">
+    </div>
+</body>
+</html>
